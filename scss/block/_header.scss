@@ -1,0 +1,118 @@
+.header {
+    width: 100%;
+    background-color: $bgColor;
+    padding: 13px 0;
+    &__wrapper {
+        display: flex;    
+        justify-content: space-between;    
+        align-items: flex-start;
+    }
+    &__contacts {
+        display: flex;     
+        align-items: flex-start;
+        // gap: 26px;
+        // width: 597px;
+        &-text {
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 18.78px;
+            text-align: left;
+            color: $redTextColor;
+            width: 186px;
+        }
+        &-phone {
+            width: 18px;
+            height: 18px;
+            margin-left: 11px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-link {
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            margin-left: 11px;
+            &::before {
+                content: '';
+                width: 1px;
+                height: 18px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                right: -13px;
+            }
+        }
+        &-email {
+            width: 26px;
+            height: 18px;
+            margin-left: 33px;
+           
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-mail {
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: #fff;
+            margin-left: 11px;
+            text-decoration: none;
+        }
+    }
+    &__search {        
+        display: flex;
+        align-items: center;
+        &-text {
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 18.78px;
+            text-align: right;
+            color: $redTextColor;
+        }
+        &-input {
+            padding: 3px 22px 3px 5px;
+            display: block;
+            width: 151px;
+            height: 19px;
+            margin-left: 12px;
+            font-family: Raleway;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 11.74px;
+            text-align: left;
+            color: #CCC8C8;
+            position: relative;
+            border: none;
+            &:focus {
+                outline: $bgColor;
+            }
+        }
+        &-btn {
+            width: 18px;
+            height: 19px;      
+            cursor: pointer;
+            transition: all .4s;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }   
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}

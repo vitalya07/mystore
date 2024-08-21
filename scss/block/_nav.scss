@@ -1,0 +1,46 @@
+.nav {
+    padding: 30px 0;
+    &__logo {
+        width: 139px;
+        height: 46px;
+       
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        width: 667px;
+        margin-left: 197px;
+        gap: 30px;
+    }
+    &__link {
+        font-family: Raleway;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 26px;
+        text-align: right;
+        color: $blueTextColor;
+        text-decoration: none;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: $blueTextColor;
+            transition: all .4s;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

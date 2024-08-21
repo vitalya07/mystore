@@ -1,0 +1,105 @@
+.company {
+    padding: 100px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left {
+        max-width: 555px;
+        min-height: 115px;
+        &-nook {
+            width: 88px;
+            height: 15px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-title {
+            font-family: Raleway;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 38px;
+            text-align: left;
+            color: $blueTextColor;
+            width: 100%;
+            margin-top: 12px;
+        }
+    }
+    &__right {
+        max-width: 585px;
+        min-height: 132px;
+        position: relative;
+        &-descr {
+            font-family: Raleway;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: $blueTextColor;
+        }
+        &::after {
+            content: '';
+            width: 2px;
+            height: 130px;
+            position: absolute;
+            top: 0;
+            left: -28px;
+            background-color: #1F1839;
+            transform: translateX(-50%);
+        }
+    }
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(565px, 1fr));
+        grid-template-rows: minmax(348px, auto);
+        grid-auto-rows: minmax(348px, auto);
+        column-gap: 25px;
+        row-gap: 29px;
+        margin-top: 72px;        
+    }
+    &__item {
+        position: relative;
+        overflow: hidden;      
+        cursor: pointer;  
+        &-bg {
+            width: 561px;
+            height: 345px; 
+            transition: all .8s;          
+            &:hover {
+                transform: scale(1.1);
+                opacity: .8;
+            }
+        }
+        &-wrapper {
+            overflow: hidden;
+            width: 561px;
+            height: 345px;
+            background-color: $blueTextColor;           
+        }
+        &-icons {
+            position: absolute;
+            top: 144px;
+            left: 81px;            
+        }
+        &-title {
+            &--2 {
+                top: 150px;
+                left: 160px;
+            }
+            position: absolute;
+            top: 143px;
+            left: 142px;
+            width: 400px;
+            font-family: Raleway;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 30px;
+            text-align: left;
+            color: #fff;
+            
+        }
+    }
+}
